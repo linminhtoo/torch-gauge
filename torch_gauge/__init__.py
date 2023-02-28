@@ -7,5 +7,5 @@ __version__ = get_versions()["version"]
 del get_versions
 
 # ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ROOT_DIR = tempfile.TemporaryDirectory()
+ROOT_DIR = tempfile.TemporaryDirectory().name
 print(f"torch gauge: o3_cache at: {ROOT_DIR}")
