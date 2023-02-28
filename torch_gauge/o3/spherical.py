@@ -393,7 +393,7 @@ class SphericalTensor:
                 invariant2d = NormContraction2d.apply(
                     self.ten, idx_tens, norm_shape, self.rep_dims, self._norm_eps
                 )
-            if mode == "uest":
+            elif mode == "uest":  # FIXED BUG HERE: minhtoo 28 Feb 2023
                 invariant2d = NormContraction2d.apply(
                     self.ten, idx_tens, norm_shape, self.rep_dims, 1.0
                 )
